@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package by.emred.ws.grpcproto;
+
+option java_multiple_files = true;
+
+message HealthRequest {
+  string requestMessage = 1;
+  string clientName = 2;
+}
+
+message HealthResponse{
+  string responseMessage = 1;
+}
+
+service HealthService {
+  rpc health(HealthRequest) returns (HealthResponse);
+}
