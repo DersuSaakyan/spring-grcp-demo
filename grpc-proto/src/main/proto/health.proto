@@ -1,11 +1,13 @@
 syntax = "proto3";
 
-package by.emred.ws.grpcproto;
+package by.emred.ws.grpcproto.proto.library;
 
 option java_multiple_files = true;
 
+import "buf/validate/validate.proto";
+
 message HealthRequest {
-  string requestMessage = 1;
+  string requestMessage = 1 [(buf.validate.field).required = true]; // Must not be empty;
   string clientName = 2;
 }
 

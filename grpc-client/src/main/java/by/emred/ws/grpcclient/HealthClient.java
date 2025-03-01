@@ -19,8 +19,8 @@ public class HealthClient {
 
     public void ping() {
         final HealthRequest request = HealthRequest.newBuilder()
-                .setClientName("Dersu")
-                .setRequestMessage("I am healthy")
+//                .setClientName("Dersu")
+//                .setRequestMessage("I am healthy")
                 .build();
 
         final HealthResponse health = healthServiceBlockingStub.health(request);
